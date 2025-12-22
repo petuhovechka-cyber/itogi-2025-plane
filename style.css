@@ -1,0 +1,249 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --apple-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    font-family: var(--apple-font);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* --- ГРАДИЕНТЫ --- */
+.slide-1 { background: linear-gradient(180deg, #FF6B00 0%, #FFCC00 100%); }
+.slide-2 { background: linear-gradient(180deg, #1DB954 0%, #191414 100%); }
+.slide-3 { background: linear-gradient(180deg, #8E2DE2 0%, #4A00E0 100%); }
+.slide-4 { background: linear-gradient(180deg, #00c6ff 0%, #0072ff 100%); }
+.slide-5 { background: linear-gradient(180deg, #f80759 0%, #bc4e9c 100%); }
+.slide-6 { background: linear-gradient(180deg, #7352eb 0%, #4e55bc 100%); }
+.slide-7 { background: linear-gradient(180deg, #f80707 0%, #bc4e4e 100%); }
+.slide-8 { background: linear-gradient(180deg, #c4f807 0%, #60bc4e 100%); }
+.slide-9 { background: linear-gradient(180deg, #0798f8 0%, #4e5ebc 100%); }
+.slide-10 { background: linear-gradient(180deg, #f8c007 0%, #bc714e 100%); }
+
+.content {
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* --- ТИПОГРАФИКА --- */
+header {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.main-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 600;
+    line-height: 1.4;
+    max-width: 600px;
+}
+
+/* --- ПЕРВЫЙ СЛАЙД --- */
+.main-intro { gap: 15px; }
+.sub-header { font-size: clamp(1.1rem, 3vw, 1.6rem); font-weight: 500; }
+.highlight-text { font-size: clamp(1.3rem, 4vw, 1.8rem); font-weight: 800; margin-top: 10px; }
+.hero-title { font-size: clamp(2.5rem, 10vw, 5.5rem); font-weight: 900; line-height: 1; margin: 10px 0; }
+
+.hero-image {
+    width: clamp(200px, 40vh, 320px);
+    height: clamp(200px, 40vh, 320px);
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    border: 1.5px solid rgba(255,255,255,0.2);
+}
+
+/* --- ВТОРОЙ СЛАЙД (СЕТКА) --- */
+.games-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(15px, 4vw, 25px);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.game-card.clickable {
+    position: relative;
+    cursor: pointer;
+    flex: 0 1 220px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-card.clickable img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.game-card.clickable:hover { transform: translateY(-10px) scale(1.05); }
+
+.click-hint {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 6px 15px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: 0.3s;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.game-card.clickable:hover .click-hint { opacity: 1; }
+
+.video-card {
+    flex: 0 1 220px;
+    height: 320px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.video-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #000;
+}
+
+.game-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.click-info {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+/* --- НАВИГАЦИЯ --- */
+.navigation-arrows {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.arrow-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(12px);
+    transition: 0.3s;
+}
+
+.arrow-btn:hover { background: rgba(255, 255, 255, 0.3); transform: scale(1.1); }
+
+.arrow-btn::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+#btnUp::after { transform: translateY(2px) rotate(45deg); }
+#btnDown::after { transform: translateY(-2px) rotate(-135deg); }
+
+#scroll-hint {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 100;
+    transition: 0.8s ease;
+}
+
+/* --- ADAPTIVITY --- */
+@media (max-width: 768px) {
+    .games-grid { flex-direction: column; gap: 15px; }
+    .video-card { height: 260px; flex: 0 1 180px; }
+    .game-card.clickable { flex: 0 1 180px; }
+}
+
+@media (max-height: 700px) {
+    .content { gap: 8px; }
+    .hero-image { width: 170px; height: 170px; }
+    .hero-title { margin: 5px 0; }
+}

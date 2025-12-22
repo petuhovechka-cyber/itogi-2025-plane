@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Итоги Года 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scroll-hint">Крути колесико или жми стрелки</div>
+
+    <div class="navigation-arrows">
+        <button id="btnUp" class="arrow-btn"></button>
+        <button id="btnDown" class="arrow-btn"></button>
+    </div>
+
+    <main class="container">
+        <section class="slide slide-1">
+            <div class="content main-intro">
+                <div class="intro-header-group">
+                    <p class="sub-header">Ну что...</p>
+                    <p class="sub-header">Думал что сделать для тебя интересного</p>
+                    <p class="highlight-text">И ПРЕДСТАВЛЯЮ</p>
+                </div>
+                
+                <div class="hero-group">
+                    <h1 class="hero-title">ИТОГИ ГОДА</h1>
+                    <div class="image-container">
+                        <img src="monkey.jpg" alt="New Year Monkey" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide slide-2">
+            <div class="content games-content">
+                <h2 class="slide-title-small">Пройдемся по двум основным видеоиграм...</h2>
+                
+                <div class="games-grid">
+                    <div class="game-card clickable" onclick="scrollToSlide(2)">
+                        <img src="clash.jpg" alt="Clash Royale" class="game-img">
+                        <div class="click-hint">Слайд 3</div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-inner">
+                            <video autoplay loop muted playsinline class="game-video">
+                                <source src="video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="game-card clickable" onclick="scrollToSlide(4)">
+                        <img src="invoker.jpg" alt="Mobile Legends" class="game-img">
+                        <div class="click-hint">Слайд 5</div>
+                    </div>
+                </div>
+                
+                <p class="click-info">Нажми на иконку игры, чтобы перейти к деталям</p>
+            </div>
+        </section>
+
+        <section class="slide slide-3">
+            <div class="content">
+                <h1>Слайд 3</h1>
+                <p>Контент</p>
+            </div>
+        </section>
+        <section class="slide slide-4">
+            <div class="content">
+                <h1>Слайд 4</h1>
+                <p>Контент</p>
+            </div>
+        </section>
+        <section class="slide slide-5">
+            <div class="content">
+                <h1>Слайд 5</h1>
+                <p>Контент</p>
+            </div>
+        </section>
+        <section class="slide slide-6">
+            <div class="content">
+                <h1>Слайд 6</h1>
+                <p>Контент</p>
+            </div>
+        </section>
+        <section class="slide slide-7">
+            <div class="content">
+                <h1>Слайд 7</h1>
+                <p>Контент</p>
+            </div>
+        </section>
+        <section class="slide slide-8">
+            <div class="content">
+                <h1>Слайд 8</h1>
+                <p>Контент</p>
+            </div>
+        </section>
+        <section class="slide slide-9">
+            <div class="content">
+                <h1>Слайд 9</h1>
+                <p>Контент</p>
+            </div>
+        </section>
+        <section class="slide slide-10">
+            <div class="content">
+                <h1>Финал</h1>
+                <p>С Ноступающим!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+    <script async defer src="https://assets.pinterest.com/js/pinit.js" data-pin-build="parsePinBtns"></script>
+</body>
+</html>
