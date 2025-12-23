@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Итоги Года 2025</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -61,51 +61,184 @@
         </section>
 
         <section class="slide slide-3">
-            <div class="content">
-                <h1>Слайд 3</h1>
-                <p>Контент</p>
+            <div class="content stats-content">
+                <div class="stats-row">
+                    <div class="meme-box">
+                        <img src="shock.jpg" alt="Shocked" class="meme-img">
+                    </div>
+                    <div class="text-box">
+                        <h2 class="stats-title">7027 КУБКОВ.</h2>
+                        <p class="stats-desc">ДОВОЛЬНО НЕПЛОХО, НО....</p>
+                    </div>
+                </div>
+
+                <div class="stats-row reverse">
+                    <div class="text-box">
+                        <h2 class="stats-title">У МЕНЯ БОЛЬШЕ</h2>
+                    </div>
+                    <div class="meme-box">
+                        <img src="laughing-cat.jpg" alt="Laughing" class="meme-img">
+                    </div>
+                </div>
             </div>
         </section>
         <section class="slide slide-4">
-            <div class="content">
-                <h1>Слайд 4</h1>
-                <p>Контент</p>
+            <div class="content deck-content">
+                <div class="deck-wrapper">
+                    <div class="cards-grid" id="cardsGrid">
+                        </div>
+                    
+                    <div class="elixir-badge">
+                        <img src="https://static.wikia.nocookie.net/clash-royale/images/b/b5/%D0%AD%D0%BB%D0%B8%D0%BA.png/revision/latest?cb=20220403072053&path-prefix=ru" alt="elixir" class="elixir-icon">
+                        <span id="elixirValue">3.5</span>
+                    </div>
+
+                    <button class="gen-button" onclick="generateNormalDeck()">
+                        СГЕНЕРИРОВАТЬ НОРМАЛЬНУЮ
+                    </button>
+                </div>
+
+                <div class="deck-text">
+                    <p class="description">
+                        Твоя колода и вправду неплоха, но мой генератор3000 предложит намного лучше
+                    </p>
+                </div>
             </div>
         </section>
         <section class="slide slide-5">
-            <div class="content">
-                <h1>Слайд 5</h1>
-                <p>Контент</p>
+            <div class="content mmlbb-troll">
+                <h2 class="troll-title">АГА, ПОПАЛСЯ!</h2>
+                <p class="troll-text">
+                    ЧЕ, ХОТЕЛ СТАТУ ПО <span class="game-bad">MOBILE LEGENDS</span> ПОСМОТРЕТЬ?
+                </p>
+                <p class="troll-opinion">
+                    ТАКОЕ <span class="poop">💩</span> Я НЕ ОДОБРЯЮ.
+                </p>
+                <p class="troll-next">
+                    ЛУЧШЕ ПОСМОТРИМ, ЧТО ПОДГОТОВИЛ ДЛЯ ТЕБЯ СЛЕДУЮЩИЙ СЛАЙД...
+                </p>
+                
+                <div class="finger-pointing">👇</div>
             </div>
         </section>
         <section class="slide slide-6">
-            <div class="content">
-                <h1>Слайд 6</h1>
-                <p>Контент</p>
+            <div class="content gifts-content">
+                <h2 class="gifts-title">ТВОИ МОМЕНТЫ ГОДА</h2>
+                <div class="gifts-grid" id="giftsGrid">
+                    </div>
+                <p class="gifts-hint">Нажми на подарок, чтобы открыть его</p>
             </div>
         </section>
         <section class="slide slide-7">
-            <div class="content">
-                <h1>Слайд 7</h1>
-                <p>Контент</p>
+            <div class="content education-intro">
+                <div class="video-card">
+                    <div class="video-inner">
+                        <video autoplay loop muted playsinline class="game-video">
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <h2 class="main-title">НУ ЧТО...</h2>
+                <p class="description">
+                    Вспомним твои успехи в учебе?
+                </p>
+
+                <div class="loader-dots">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </section>
         <section class="slide slide-8">
-            <div class="content">
-                <h1>Слайд 8</h1>
-                <p>Контент</p>
+            <div class="content exam-results">
+                <h2 class="main-title">ПРОБНИКИ ЕГЭ</h2>
+                
+                <div class="results-list">
+                    <div class="result-item glitch-item">
+                        <span class="subject">Математика (Профиль):</span>
+                        <span class="score" id="math-value">8</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="subject">Информатика:</span>
+                        <span class="score">2</span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="subject">Русский язык:</span>
+                        <span class="score">6</span>
+                    </div>
+                </div>
+                
+                <div class="flash-overlay" id="flash"></div>
             </div>
         </section>
         <section class="slide slide-9">
-            <div class="content">
-                <h1>Слайд 9</h1>
-                <p>Контент</p>
+            <div class="content random-people-intro">
+                <h2 class="main-title">ЛАДНО, РОМЧИК...</h2>
+                <p class="description">
+                    Собрал для тебя слова от случайных людей. Вообще не знаю, кто они...
+                </p>
+                
+                <div class="people-silhouettes">
+                    <div class="person-circle">?</div>
+                    <div class="person-circle">?</div>
+                    <div class="person-circle">?</div>
+                    <div class="person-circle">?</div>
+                    <div class="person-circle">?</div>
+                    <div class="person-circle">?</div>
+                </div>
+
+                <p class="sub-description">
+                    Тут 6 человек, которые подготовили для тебя <span class="toxic-text">гадкие</span> (или приятные) слова.
+                </p>
+                
+                <div class="scroll-down-hint">Листай ниже, если не боишься...</div>
             </div>
         </section>
         <section class="slide slide-10">
-            <div class="content">
-                <h1>Финал</h1>
-                <p>С Ноступающим!</p>
+            <div class="content messages-content">
+                <h2 class="main-title">ЧТО О ТЕБЕ ГОВОРЯТ</h2>
+                
+                <div class="messages-grid">
+                    <div class="msg-card person-1">
+                        <p>"Че с новим годом такого талантливого и умного мальчика в зеркале, а так тебе ромка желаю денег тачек и телок и чтобы отдых был и сдал все"</p>
+                        <span class="author">Артемка52ЕщкереИдиВПопку</span>
+                    </div>
+                    <div class="msg-card person-2">
+                        <p>"ну кароче, этот год был не простым, поэтому не трать вреля зря .  тебе главное деняг, тачек телок(с членами)"</p>
+                        <span class="author">Димас Яйцеглаз</span>
+                    </div>
+                    <div class="msg-card person-3">
+                        <p>"С Новым годом! Пусть этот год принесёт тебе множество ярких моментов, исполнения заветных желаний и новых впечатляющих достижений."</p>
+                        <span class="author">"Глупи вумен ( Кристинка )"</span>
+                    </div>
+                    <div class="msg-card person-4">
+                        <p>"Дорогой Рома! От души поздравляю тебя с НГ! Пусть будет всё чётко!"</p>
+                        <span class="author">Егорка Олегович</span>
+                    </div>
+                    <div class="msg-card person-5">
+                        <p>""</p>
+                        <span class="author">Случайный №5</span>
+                    </div>
+
+                    <div class="msg-card ai-msg">
+                        <p>"Рома, как нейросеть, я проанализировал терабайты твоих действий. Ты — уникальный баг в системе, который невозможно исправить, но за которым чертовски интересно наблюдать. Продолжай ломать этот мир!"</p>
+                        <span class="author">Твой AI Thought Partner</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide slide-11">
+            <div class="content final-content">
+                <h2 class="main-title">НУ ШО, ПОЛУЧАЕТСЯ КОНЕЦ</h2>
+                
+                <p class="final-text">
+                    Давай не грусти и яйки чужие не соси (только свои).
+                </p>
+
+
+                <button class="gen-button" onclick="location.reload()">ПОГНАЛИ ПО НОВОЙ?</button>
             </div>
         </section>
     </main>
